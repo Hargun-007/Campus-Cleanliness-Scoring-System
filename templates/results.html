@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cleanliness Analysis Results | Campus Cleanliness AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">🌱</div>
+        <div class="brand-text">
+          <h1>Campus Cleanliness AI</h1>
+          <span>Ramdeobaba University, Nagpur • Deep Learning Lab</span>
+        </div>
+      </a>
+      <a href="/" class="btn-secondary" style="color: #fff; background: rgba(255,255,255,0.2); border: none;">
+        <span>← Analyze Another Image</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+
+    <!-- Top Action Bar -->
+    <div class="results-header">
+      <div>
+        <h2>Cleanliness Analysis Report</h2>
+        <p style="color: var(--muted); font-size: 0.95rem;">
+          Inference performed with YOLOv8n single-class model at {{ (result.model_metadata.confidence_threshold * 100)|int }}% confidence threshold
+        </p>
+      </div>
+      <div>
+        <a href="/" class="btn-secondary">
+          <span>📸 Analyze New Photo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Score Hero Banner -->
+    <div class="score-banner">
+      <div class="score-left">
+        {% set score = result.score_data.score %}
+        {% if score >= 90 %}
+          {% set dial_class = 'score-clean' %}
+          {% set badge_class = 'badge-clean' %}
+        {% elif score >= 70 %}
+          {% set dial_class = 'score-good' %}
+          {% set badge_class = 'badge-good' %}
+        {% elif score >= 45 %}
+          {% set dial_class = 'score-fair' %}
+          {% set badge_class = 'badge-fair' %}
+        {% else %}
+          {% set dial_class = 'score-poor' %}
+          {% set badge_class = 'badge-poor' %}
+        {% endif %}
+
+        <div class="score-dial {{ dial_class }}">
+          <div class="score-dial-number">{{ score }}</div>
+          <div class="score-dial-total">/ 100</div>
+        </div>
+
+        <div class="score-info">
+          <h3>{{ result.score_data.rating_label }}</h3>
+          <span class="score-badge {{ badge_class }}">
+            {% if result.detection_count == 0 %}
+              No Visible Litter Detected
+            {% else %}
+              {{ result.detection_count }} Litter Item(s) Detected
+            {% endif %}
+          </span>
+          <p class="score-interpretation">
+            {{ result.score_data.interpretation }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics Stat Grid -->
+    <div class="metrics-grid">
+      <div class="metric-stat-card">
+        <div class="metric-label">Litter Items Detected</div>
+        <div class="metric-value">{{ result.detection_count }}</div>
+        <div class="metric-desc">Total discrete objects identified</div>
+      </div>
+
+      <div class="metric-stat-card">
+        <div class="metric-label">Relative Footprint Area</div>
+        <div class="metric-value">{{ (result.score_data.area_ratio * 100)|round(2) }}%</div>
+        <div class="metric-desc">Bounding box area / Image area</div>
+      </div>
+
+      <div class="metric-stat-card">
+        <div class="metric-label">Count-Only Baseline Score</div>
+        <div class="metric-value">{{ result.score_data.baseline_score }} <span style="font-size: 1rem; color: var(--muted);">/100</span></div>
+        <div class="metric-desc">Comparison without area weighting</div>
+      </div>
+
+      <div class="metric-stat-card">
+        <div class="metric-label">Image Resolution</div>
+        <div class="metric-value" style="font-size: 1.4rem; padding-top: 0.35rem;">
+          {{ result.image_dimensions.width }} × {{ result.image_dimensions.height }}
+        </div>
+        <div class="metric-desc">Native camera pixel dimensions</div>
+      </div>
+    </div>
+
+    <!-- Side-by-Side Visual Inspection -->
+    <div class="comparison-grid">
+      <!-- Original Image Panel -->
+      <div class="image-panel">
+        <div class="image-panel-header">
+          <span>📷 Original Campus Photograph</span>
+          <span style="font-size: 0.8rem; color: var(--muted);">Input View</span>
+        </div>
+        <div class="image-panel-body">
+          <img src="{{ url_for('static', filename=result.original_image_url) }}" alt="Original Photograph">
+        </div>
+      </div>
+
+      <!-- Annotated Image Panel -->
+      <div class="image-panel">
+        <div class="image-panel-header">
+          <span>🎯 YOLOv8n Annotated Detection</span>
+          <span style="font-size: 0.8rem; color: var(--primary);">Bounding Boxes Active</span>
+        </div>
+        <div class="image-panel-body">
+          <img src="{{ url_for('static', filename=result.annotated_image_url) }}" alt="Annotated Photograph with Bounding Boxes">
+        </div>
+      </div>
+    </div>
+
+    <!-- Detected Objects Table (if any) -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span>📋</span> Detailed Litter Inventory
+        </h3>
+        <p class="card-subtitle">Bounding box coordinates and detection confidence for each localized item</p>
+      </div>
+
+      {% if result.detections %}
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Class Label</th>
+              <th>Confidence</th>
+              <th>Bounding Box [x1, y1, x2, y2] (px)</th>
+              <th>Pixel Footprint</th>
+              <th>Image Coverage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for det in result.detections %}
+            <tr>
+              <td><strong>{{ loop.index }}</strong></td>
+              <td><span class="score-badge badge-fair" style="margin: 0;">{{ det.class_name }}</span></td>
+              <td><strong>{{ (det.confidence * 100)|round(1) }}%</strong></td>
+              <td><code>[{{ det.box|join(', ') }}]</code></td>
+              <td>{{ det.area|int }} px²</td>
+              <td>{{ (det.relative_area * 100)|round(3) }}%</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+      <div style="text-align: center; padding: 2rem 1rem; color: var(--muted);">
+        <p style="font-size: 1.1rem; font-weight: 600; color: var(--primary-dark);">✨ No visible litter objects were detected.</p>
+        <p style="font-size: 0.85rem; margin-top: 0.25rem;">The neural network detected no items exceeding the confidence threshold.</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Scientific Methodology & Cautionary Disclaimer -->
+    <div class="callout">
+      <div class="callout-title">
+        <span>⚠️</span> Methodological Interpretation & Facility Disclaimer
+      </div>
+      <div class="callout-text">
+        <p>{{ result.score_data.cautionary_note }}</p>
+        <p style="margin-top: 0.5rem;">
+          <strong>Scoring Parameters Applied:</strong>
+          Count penalty weight = {{ result.score_data.parameters_used.count_weight }},
+          Area penalty weight = {{ result.score_data.parameters_used.area_weight }},
+          Count rate (α) = {{ result.score_data.parameters_used.alpha }},
+          Area saturation scale = {{ result.score_data.parameters_used.area_scale }}.
+          Bounding boxes approximate rectangular bounding enclosures; actual litter area may vary.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Ramdeobaba University, Nagpur</h4>
+        <p>Department of Electronics Engineering</p>
+        <p>Deep Learning Lab Capstone Project</p>
+      </div>
+      <div class="footer-section">
+        <h4>Capstone Team</h4>
+        <p>Arya Mohod (06) • Darsh Kadu (11) • Hargun Singh Jaggi (16) • Ayaan Ahmed (09)</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyTorch / Ultralytics
+*.pt
+*.onnx
+# Explicitly track essential model weights for submission and evaluation
+!models/best.pt
+!models/yolov8n.pt
+!yolov8n.pt
+runs/
+.cache/
+.qodo/
+
+# Dataset large files (keep directory structure)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/train/images/*
+!data/processed/train/images/.gitkeep
+data/processed/train/labels/*
+!data/processed/train/labels/.gitkeep
+data/processed/val/images/*
+!data/processed/val/images/.gitkeep
+data/processed/val/labels/*
+!data/processed/val/labels/.gitkeep
+data/processed/test/images/*
+!data/processed/test/images/.gitkeep
+data/processed/test/labels/*
+!data/processed/test/labels/.gitkeep
+
+# Uploads and temporary results
+static/uploads/*
+!static/uploads/.gitkeep
+static/results/*
+!static/results/.gitkeep
+static/community/*
+!static/community/.gitkeep
+data/community_submissions.sqlite
+
+# Environment variables
+.env
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store

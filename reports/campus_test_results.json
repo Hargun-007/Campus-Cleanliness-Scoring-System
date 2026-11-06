@@ -1,0 +1,46 @@
+{
+  "total_campus_images_evaluated": 4,
+  "total_litter_detected": 3,
+  "mean_campus_cleanliness_score": 74.25,
+  "results": [
+    {
+      "filename": "campus_canteen_clean.jpg",
+      "cleanliness_score": 35,
+      "litter_count": 1,
+      "area_ratio": 0.4116,
+      "rating_label": "Poor / High Litter Density",
+      "annotated_image": "reports\\campus_test_runs\\annotated_campus_canteen_clean.jpg"
+    },
+    {
+      "filename": "campus_corridor_clean.jpg",
+      "cleanliness_score": 100,
+      "litter_count": 0,
+      "area_ratio": 0.0,
+      "rating_label": "Excellent / Spotless",
+      "annotated_image": "reports\\campus_test_runs\\annotated_campus_corridor_clean.jpg"
+    },
+    {
+      "filename": "campus_garden_littered.jpg",
+      "cleanliness_score": 81,
+      "litter_count": 1,
+      "area_ratio": 0.0124,
+      "rating_label": "Good / Satisfactory",
+      "annotated_image": "reports\\campus_test_runs\\annotated_campus_garden_littered.jpg"
+    },
+    {
+      "filename": "campus_pathway_bottles.jpg",
+      "cleanliness_score": 81,
+      "litter_count": 1,
+      "area_ratio": 0.0134,
+      "rating_label": "Good / Satisfactory",
+      "annotated_image": "reports\\campus_test_runs\\annotated_campus_pathway_bottles.jpg"
+    }
+  ],
+  "failure_mode_analysis": {
+    "small_litter_items": "Items smaller than 16x16 pixels (cigarette butts, pins, tiny wrappers) may fall below YOLOv8n receptive field resolution.",
+    "partial_occlusion": "Litter partially hidden beneath benches, behind pillars, or in tall grass exhibits reduced feature visibility.",
+    "shadows_and_lighting": "Harsh afternoon sun and deep shadows on concrete can cause false positive shadows or false negative missed items.",
+    "textured_backgrounds": "Dry leaves, pebbles, and speckled terrazzo tiles can occasionally trigger false detections.",
+    "motion_blur": "Low-quality camera shots or moving captures blur high-frequency edges necessary for litter classification."
+  }
+}

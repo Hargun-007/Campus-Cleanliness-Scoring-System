@@ -1,0 +1,112 @@
+{
+  "split": "test",
+  "count": 15,
+  "total_boxes": 44,
+  "samples": [
+    {
+      "image_id": 11,
+      "stem": "batch_1_000014",
+      "image_file": "batch_1_000014.jpg",
+      "label_file": "batch_1_000014.txt",
+      "box_count": 6
+    },
+    {
+      "image_id": 12,
+      "stem": "batch_1_000048",
+      "image_file": "batch_1_000048.jpg",
+      "label_file": "batch_1_000048.txt",
+      "box_count": 10
+    },
+    {
+      "image_id": 19,
+      "stem": "batch_1_000032",
+      "image_file": "batch_1_000032.jpg",
+      "label_file": "batch_1_000032.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 20,
+      "stem": "batch_1_000040",
+      "image_file": "batch_1_000040.jpg",
+      "label_file": "batch_1_000040.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 21,
+      "stem": "batch_1_000043",
+      "image_file": "batch_1_000043.jpg",
+      "label_file": "batch_1_000043.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 24,
+      "stem": "batch_1_000061",
+      "image_file": "batch_1_000061.jpg",
+      "label_file": "batch_1_000061.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 34,
+      "stem": "batch_1_000050",
+      "image_file": "batch_1_000050.jpg",
+      "label_file": "batch_1_000050.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 37,
+      "stem": "batch_1_000013",
+      "image_file": "batch_1_000013.jpg",
+      "label_file": "batch_1_000013.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 40,
+      "stem": "batch_1_000017",
+      "image_file": "batch_1_000017.jpg",
+      "label_file": "batch_1_000017.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 58,
+      "stem": "batch_1_000078",
+      "image_file": "batch_1_000078.JPG",
+      "label_file": "batch_1_000078.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 71,
+      "stem": "batch_1_000093",
+      "image_file": "batch_1_000093.JPG",
+      "label_file": "batch_1_000093.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 77,
+      "stem": "batch_1_000099",
+      "image_file": "batch_1_000099.JPG",
+      "label_file": "batch_1_000099.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 82,
+      "stem": "batch_1_000104",
+      "image_file": "batch_1_000104.JPG",
+      "label_file": "batch_1_000104.txt",
+      "box_count": 7
+    },
+    {
+      "image_id": 87,
+      "stem": "batch_1_000110",
+      "image_file": "batch_1_000110.JPG",
+      "label_file": "batch_1_000110.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 94,
+      "stem": "batch_1_000121",
+      "image_file": "batch_1_000121.JPG",
+      "label_file": "batch_1_000121.txt",
+      "box_count": 2
+    }
+  ]
+}

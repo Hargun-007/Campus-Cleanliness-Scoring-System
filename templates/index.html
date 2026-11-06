@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Cleanliness Scoring System | Ramdeobaba University</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        <div class="brand-icon">🌱</div>
+        <div class="brand-text">
+          <h1>Campus Cleanliness AI</h1>
+          <span>Ramdeobaba University, Nagpur • Deep Learning Lab</span>
+        </div>
+      </a>
+      <div class="nav-badges">
+        <span class="nav-badge">YOLOv8n Single-Class</span>
+        <span class="nav-badge">TACO Fine-Tuned</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+
+    <!-- Hero Intro -->
+    <section class="hero">
+      <div class="hero-pill">
+        <span>🏆 B.Tech Capstone Project • Electronics Engineering</span>
+      </div>
+      <h2>Campus Cleanliness Scoring System</h2>
+      <p>
+        Upload an image of any campus location—corridors, walkways, gardens, or parking zones.
+        Our fine-tuned YOLOv8n detector automatically detects visible litter and calculates an explainable
+        cleanliness score from 0 to 100.
+      </p>
+    </section>
+
+    <!-- Flash Errors -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-message flash-{{ category }}">
+            <span>⚠️</span>
+            <span>{{ message }}</span>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% if error_message %}
+      <div class="flash-message">
+        <span>⚠️</span>
+        <span>{{ error_message }}</span>
+      </div>
+    {% endif %}
+
+    <!-- Upload Card -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span>📸</span> Analyze Campus Photograph
+        </h3>
+        <p class="card-subtitle">Supported formats: JPG, JPEG, PNG, WEBP (Maximum upload size: 16 MB)</p>
+      </div>
+
+      <form id="upload-form" action="{{ url_for('web.analyze') }}" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="sample_name" id="sample-name-input" value="">
+
+        <!-- Dropzone -->
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="file-input" name="image" accept=".jpg,.jpeg,.png,.webp">
+
+          <div id="dropzone-content">
+            <div class="dropzone-icon">📁</div>
+            <h3>Drag & Drop Campus Photograph Here</h3>
+            <p>or click anywhere in this box to browse files on your computer</p>
+            <button type="button" class="browse-btn">
+              <span>📂 Browse Image</span>
+            </button>
+          </div>
+
+          <!-- Live Client Preview -->
+          <div class="preview-container" id="preview-container">
+            <button type="button" class="remove-btn" id="remove-preview-btn" title="Remove image">✕</button>
+            <img id="preview-image" class="preview-image" src="" alt="Selected Preview">
+            <div class="preview-info" id="preview-info"></div>
+          </div>
+        </div>
+
+        <!-- Controls Row -->
+        <div class="controls-row">
+          <div class="control-group">
+            <div class="control-label">
+              <span>Detection Confidence Threshold</span>
+              <span id="conf-value">0.25</span>
+            </div>
+            <input type="range" class="slider" id="conf-slider" name="confidence" min="0.10" max="0.80" step="0.05" value="0.25">
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-btn" disabled>
+            <span>🔍 Analyze Cleanliness</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Public Community Photo Submissions -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title"><span>🤝</span> Share a Campus Photo</h3>
+        <p class="card-subtitle">Submit a photo to store it on this website and share it publicly in the gallery. Do not upload private or sensitive images.</p>
+      </div>
+      <form action="{{ url_for('web.submit_community_photo') }}" method="POST" enctype="multipart/form-data">
+        <div class="community-upload">
+          <label for="community-image">Choose a campus photo (JPG, PNG, or WEBP; up to 16 MB)</label>
+          <input id="community-image" type="file" name="community_image" accept=".jpg,.jpeg,.png,.webp" required>
+        </div>
+        <button type="submit" class="submit-btn">📤 Post Photo to Gallery</button>
+      </form>
+    </div>
+
+    <section class="card community-gallery" aria-labelledby="community-gallery-title">
+      <div class="card-header">
+        <h3 class="card-title" id="community-gallery-title"><span>🖼️</span> Campus Community Gallery</h3>
+        <p class="card-subtitle">Photos shared by campus visitors. Newest submissions appear first.</p>
+      </div>
+      {% if community_submissions %}
+      <div class="samples-grid">
+        {% for submission in community_submissions %}
+        <article class="sample-card">
+          <img src="{{ url_for('web.community_photo', filename=submission.filename) }}" alt="Photo shared from around campus" loading="lazy">
+          <div class="sample-card-body">
+            <div class="sample-card-title">Campus photo</div>
+            <time class="sample-card-desc">{{ submission.submitted_at }}</time>
+            <form action="{{ url_for('web.analyze_community_photo', filename=submission.filename) }}" method="POST">
+              <button type="submit" class="community-analyze-btn">
+                {% if submission.analysis %}Analyze Again{% else %}Analyze Photo{% endif %}
+              </button>
+            </form>
+            {% if submission.analysis %}
+            <div class="community-analysis">
+              <strong>Cleanliness: {{ submission.analysis.score_data.score }}/100</strong>
+              <span>{{ submission.analysis.score_data.rating_label }}</span>
+              <span>
+                {% if submission.analysis.detection_count == 0 %}
+                No visible litter detected
+                {% else %}
+                {{ submission.analysis.detection_count }} litter item(s) detected
+                {% endif %}
+              </span>
+              <img
+                class="community-annotated-image"
+                src="{{ url_for('static', filename=submission.analysis.annotated_image_url) }}"
+                alt="AI litter detection results"
+                loading="lazy"
+              >
+              <span class="sample-card-desc">AI detection preview</span>
+            </div>
+            {% else %}
+            <p class="sample-card-desc">Analysis is unavailable for this older submission.</p>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="card-subtitle">No photos have been shared yet. Be the first to post one.</p>
+      {% endif %}
+    </section>
+
+    <!-- Sample Gallery for Quick Evaluation -->
+    {% if samples %}
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span>🏛️</span> Quick Demo: Real Campus Test Photographs
+        </h3>
+        <p class="card-subtitle">Click any real photograph collected around campus to evaluate detection instantly without uploading.</p>
+      </div>
+
+      <div class="samples-grid">
+        {% for s in samples %}
+        <div class="sample-card" data-sample-name="{{ s.name }}">
+          <img src="{{ url_for('static', filename='uploads/' + s.name) }}" onerror="this.src='/static/results/' + '{{ s.name }}'" alt="{{ s.label }}">
+          <div class="sample-card-body">
+            <div class="sample-card-title">{{ s.label }}</div>
+            <div class="sample-card-desc">Click to run real YOLOv8n inference</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Architecture & Scoring Explanation Card -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">
+          <span>⚙️</span> Methodology & Technical Pipeline
+        </h3>
+        <p class="card-subtitle">Transparent, explainable computer vision architecture designed for campus maintenance</p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-stat-card">
+          <div class="metric-label">Object Detection Model</div>
+          <div class="metric-value" style="font-size: 1.25rem;">YOLOv8n (Nano)</div>
+          <div class="metric-desc">Transfer learning with fine-tuned single-class head (litter) on TACO benchmark.</div>
+        </div>
+
+        <div class="metric-stat-card">
+          <div class="metric-label">Item Count Penalty</div>
+          <div class="metric-value" style="font-size: 1.25rem;">1 - e<sup>-0.35 · N</sup></div>
+          <div class="metric-desc">Exponential decay penalizing high frequencies of discrete litter items.</div>
+        </div>
+
+        <div class="metric-stat-card">
+          <div class="metric-label">Area Footprint Ratio</div>
+          <div class="metric-value" style="font-size: 1.25rem;">min(1, Area / 0.15)</div>
+          <div class="metric-desc">Normalizes total bounding box pixel area against overall image dimensions.</div>
+        </div>
+
+        <div class="metric-stat-card">
+          <div class="metric-label">Cleanliness Score</div>
+          <div class="metric-value" style="font-size: 1.25rem;">0 – 100 Scale</div>
+          <div class="metric-desc">Balanced combination: 50% item count penalty + 50% area coverage penalty.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Loading Animation Overlay -->
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="spinner"></div>
+    <div class="loading-title">Processing Campus Image</div>
+    <div class="loading-sub">Running YOLOv8n inference & calculating cleanliness footprint...</div>
+  </div>
+
+  <!-- Footer with Capstone Team Information -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Ramdeobaba University, Nagpur</h4>
+        <p>Department of Electronics Engineering</p>
+        <p>Course: Deep Learning Lab Capstone (Academic Session 2026–27)</p>
+        <p>Supervisor: Prof. V. R. Gupta</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Project Team Members</h4>
+        <ul class="team-list">
+          <li><strong>Arya Mohod</strong> (Roll No. 06) • Dataset Preparation & Preprocessing</li>
+          <li><strong>Darsh Kadu</strong> (Roll No. 11) • YOLOv8n Fine-Tuning & Tracking</li>
+          <li><strong>Hargun Singh Jaggi</strong> (Roll No. 16) • Evaluation Metrics & Baselines</li>
+          <li><strong>Ayaan Ahmed</strong> (Roll No. 09) • Cleanliness Algorithm & Web Integration</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Model & Dataset</h4>
+        <p>Detection Class: <code>litter</code> (ID 0)</p>
+        <p>Pretrained Backbone: MS COCO (yolov8n.pt)</p>
+        <p>Dataset: TACO (Trash Annotations in Context)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

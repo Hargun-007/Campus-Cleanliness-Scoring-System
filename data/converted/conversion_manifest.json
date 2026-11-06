@@ -1,0 +1,909 @@
+{
+  "total_samples": 100,
+  "matched_images_on_disk": 100,
+  "valid_boxes": 302,
+  "empty_negatives": 0,
+  "skipped_reasons": {},
+  "samples": [
+    {
+      "image_id": 0,
+      "image_path": "data\\raw\\images\\batch_1\\000006.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000006.txt",
+      "stem": "batch_1_000006",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 1,
+      "image_path": "data\\raw\\images\\batch_1\\000008.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000008.txt",
+      "stem": "batch_1_000008",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 2,
+      "image_path": "data\\raw\\images\\batch_1\\000010.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000010.txt",
+      "stem": "batch_1_000010",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 3,
+      "image_path": "data\\raw\\images\\batch_1\\000019.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000019.txt",
+      "stem": "batch_1_000019",
+      "width": 640,
+      "height": 480,
+      "box_count": 4
+    },
+    {
+      "image_id": 4,
+      "image_path": "data\\raw\\images\\batch_1\\000026.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000026.txt",
+      "stem": "batch_1_000026",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 5,
+      "image_path": "data\\raw\\images\\batch_1\\000047.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000047.txt",
+      "stem": "batch_1_000047",
+      "width": 640,
+      "height": 480,
+      "box_count": 6
+    },
+    {
+      "image_id": 6,
+      "image_path": "data\\raw\\images\\batch_1\\000055.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000055.txt",
+      "stem": "batch_1_000055",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 7,
+      "image_path": "data\\raw\\images\\batch_1\\000001.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000001.txt",
+      "stem": "batch_1_000001",
+      "width": 640,
+      "height": 480,
+      "box_count": 2
+    },
+    {
+      "image_id": 8,
+      "image_path": "data\\raw\\images\\batch_1\\000005.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000005.txt",
+      "stem": "batch_1_000005",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 9,
+      "image_path": "data\\raw\\images\\batch_1\\000007.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000007.txt",
+      "stem": "batch_1_000007",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 10,
+      "image_path": "data\\raw\\images\\batch_1\\000012.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000012.txt",
+      "stem": "batch_1_000012",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 11,
+      "image_path": "data\\raw\\images\\batch_1\\000014.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000014.txt",
+      "stem": "batch_1_000014",
+      "width": 480,
+      "height": 640,
+      "box_count": 6
+    },
+    {
+      "image_id": 12,
+      "image_path": "data\\raw\\images\\batch_1\\000048.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000048.txt",
+      "stem": "batch_1_000048",
+      "width": 640,
+      "height": 480,
+      "box_count": 10
+    },
+    {
+      "image_id": 13,
+      "image_path": "data\\raw\\images\\batch_1\\000053.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000053.txt",
+      "stem": "batch_1_000053",
+      "width": 480,
+      "height": 640,
+      "box_count": 4
+    },
+    {
+      "image_id": 14,
+      "image_path": "data\\raw\\images\\batch_1\\000056.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000056.txt",
+      "stem": "batch_1_000056",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 15,
+      "image_path": "data\\raw\\images\\batch_1\\000058.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000058.txt",
+      "stem": "batch_1_000058",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 16,
+      "image_path": "data\\raw\\images\\batch_1\\000060.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000060.txt",
+      "stem": "batch_1_000060",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 17,
+      "image_path": "data\\raw\\images\\batch_1\\000003.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000003.txt",
+      "stem": "batch_1_000003",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 18,
+      "image_path": "data\\raw\\images\\batch_1\\000011.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000011.txt",
+      "stem": "batch_1_000011",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 19,
+      "image_path": "data\\raw\\images\\batch_1\\000032.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000032.txt",
+      "stem": "batch_1_000032",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 20,
+      "image_path": "data\\raw\\images\\batch_1\\000040.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000040.txt",
+      "stem": "batch_1_000040",
+      "width": 640,
+      "height": 480,
+      "box_count": 4
+    },
+    {
+      "image_id": 21,
+      "image_path": "data\\raw\\images\\batch_1\\000043.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000043.txt",
+      "stem": "batch_1_000043",
+      "width": 640,
+      "height": 480,
+      "box_count": 2
+    },
+    {
+      "image_id": 22,
+      "image_path": "data\\raw\\images\\batch_1\\000049.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000049.txt",
+      "stem": "batch_1_000049",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 23,
+      "image_path": "data\\raw\\images\\batch_1\\000054.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000054.txt",
+      "stem": "batch_1_000054",
+      "width": 480,
+      "height": 640,
+      "box_count": 4
+    },
+    {
+      "image_id": 24,
+      "image_path": "data\\raw\\images\\batch_1\\000061.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000061.txt",
+      "stem": "batch_1_000061",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 25,
+      "image_path": "data\\raw\\images\\batch_1\\000021.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000021.txt",
+      "stem": "batch_1_000021",
+      "width": 640,
+      "height": 480,
+      "box_count": 2
+    },
+    {
+      "image_id": 26,
+      "image_path": "data\\raw\\images\\batch_1\\000022.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000022.txt",
+      "stem": "batch_1_000022",
+      "width": 640,
+      "height": 480,
+      "box_count": 2
+    },
+    {
+      "image_id": 27,
+      "image_path": "data\\raw\\images\\batch_1\\000023.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000023.txt",
+      "stem": "batch_1_000023",
+      "width": 480,
+      "height": 640,
+      "box_count": 7
+    },
+    {
+      "image_id": 28,
+      "image_path": "data\\raw\\images\\batch_1\\000024.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000024.txt",
+      "stem": "batch_1_000024",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 29,
+      "image_path": "data\\raw\\images\\batch_1\\000027.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000027.txt",
+      "stem": "batch_1_000027",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 30,
+      "image_path": "data\\raw\\images\\batch_1\\000028.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000028.txt",
+      "stem": "batch_1_000028",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 31,
+      "image_path": "data\\raw\\images\\batch_1\\000030.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000030.txt",
+      "stem": "batch_1_000030",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 32,
+      "image_path": "data\\raw\\images\\batch_1\\000031.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000031.txt",
+      "stem": "batch_1_000031",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 33,
+      "image_path": "data\\raw\\images\\batch_1\\000042.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000042.txt",
+      "stem": "batch_1_000042",
+      "width": 640,
+      "height": 480,
+      "box_count": 4
+    },
+    {
+      "image_id": 34,
+      "image_path": "data\\raw\\images\\batch_1\\000050.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000050.txt",
+      "stem": "batch_1_000050",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 35,
+      "image_path": "data\\raw\\images\\batch_1\\000059.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000059.txt",
+      "stem": "batch_1_000059",
+      "width": 480,
+      "height": 640,
+      "box_count": 4
+    },
+    {
+      "image_id": 36,
+      "image_path": "data\\raw\\images\\batch_1\\000000.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000000.txt",
+      "stem": "batch_1_000000",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 37,
+      "image_path": "data\\raw\\images\\batch_1\\000013.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000013.txt",
+      "stem": "batch_1_000013",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 38,
+      "image_path": "data\\raw\\images\\batch_1\\000015.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000015.txt",
+      "stem": "batch_1_000015",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 39,
+      "image_path": "data\\raw\\images\\batch_1\\000016.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000016.txt",
+      "stem": "batch_1_000016",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 40,
+      "image_path": "data\\raw\\images\\batch_1\\000017.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000017.txt",
+      "stem": "batch_1_000017",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 41,
+      "image_path": "data\\raw\\images\\batch_1\\000025.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000025.txt",
+      "stem": "batch_1_000025",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 42,
+      "image_path": "data\\raw\\images\\batch_1\\000029.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000029.txt",
+      "stem": "batch_1_000029",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 43,
+      "image_path": "data\\raw\\images\\batch_1\\000035.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000035.txt",
+      "stem": "batch_1_000035",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 44,
+      "image_path": "data\\raw\\images\\batch_1\\000037.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000037.txt",
+      "stem": "batch_1_000037",
+      "width": 640,
+      "height": 480,
+      "box_count": 5
+    },
+    {
+      "image_id": 45,
+      "image_path": "data\\raw\\images\\batch_1\\000045.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000045.txt",
+      "stem": "batch_1_000045",
+      "width": 640,
+      "height": 480,
+      "box_count": 6
+    },
+    {
+      "image_id": 46,
+      "image_path": "data\\raw\\images\\batch_1\\000038.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000038.txt",
+      "stem": "batch_1_000038",
+      "width": 640,
+      "height": 480,
+      "box_count": 6
+    },
+    {
+      "image_id": 47,
+      "image_path": "data\\raw\\images\\batch_1\\000065.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000065.txt",
+      "stem": "batch_1_000065",
+      "width": 640,
+      "height": 480,
+      "box_count": 4
+    },
+    {
+      "image_id": 48,
+      "image_path": "data\\raw\\images\\batch_1\\000066.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000066.txt",
+      "stem": "batch_1_000066",
+      "width": 640,
+      "height": 480,
+      "box_count": 1
+    },
+    {
+      "image_id": 49,
+      "image_path": "data\\raw\\images\\batch_1\\000067.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000067.txt",
+      "stem": "batch_1_000067",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 50,
+      "image_path": "data\\raw\\images\\batch_1\\000068.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000068.txt",
+      "stem": "batch_1_000068",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 51,
+      "image_path": "data\\raw\\images\\batch_1\\000069.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000069.txt",
+      "stem": "batch_1_000069",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 52,
+      "image_path": "data\\raw\\images\\batch_1\\000070.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000070.txt",
+      "stem": "batch_1_000070",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 53,
+      "image_path": "data\\raw\\images\\batch_1\\000071.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000071.txt",
+      "stem": "batch_1_000071",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 54,
+      "image_path": "data\\raw\\images\\batch_1\\000072.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000072.txt",
+      "stem": "batch_1_000072",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 55,
+      "image_path": "data\\raw\\images\\batch_1\\000073.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000073.txt",
+      "stem": "batch_1_000073",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 56,
+      "image_path": "data\\raw\\images\\batch_1\\000074.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000074.txt",
+      "stem": "batch_1_000074",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 57,
+      "image_path": "data\\raw\\images\\batch_1\\000076.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000076.txt",
+      "stem": "batch_1_000076",
+      "width": 480,
+      "height": 640,
+      "box_count": 7
+    },
+    {
+      "image_id": 58,
+      "image_path": "data\\raw\\images\\batch_1\\000078.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000078.txt",
+      "stem": "batch_1_000078",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 59,
+      "image_path": "data\\raw\\images\\batch_1\\000079.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000079.txt",
+      "stem": "batch_1_000079",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 60,
+      "image_path": "data\\raw\\images\\batch_1\\000081.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000081.txt",
+      "stem": "batch_1_000081",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 61,
+      "image_path": "data\\raw\\images\\batch_1\\000082.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000082.txt",
+      "stem": "batch_1_000082",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 62,
+      "image_path": "data\\raw\\images\\batch_1\\000083.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000083.txt",
+      "stem": "batch_1_000083",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 63,
+      "image_path": "data\\raw\\images\\batch_1\\000084.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000084.txt",
+      "stem": "batch_1_000084",
+      "width": 480,
+      "height": 640,
+      "box_count": 4
+    },
+    {
+      "image_id": 64,
+      "image_path": "data\\raw\\images\\batch_1\\000085.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000085.txt",
+      "stem": "batch_1_000085",
+      "width": 480,
+      "height": 640,
+      "box_count": 9
+    },
+    {
+      "image_id": 65,
+      "image_path": "data\\raw\\images\\batch_1\\000086.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000086.txt",
+      "stem": "batch_1_000086",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 66,
+      "image_path": "data\\raw\\images\\batch_1\\000087.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000087.txt",
+      "stem": "batch_1_000087",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 67,
+      "image_path": "data\\raw\\images\\batch_1\\000088.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000088.txt",
+      "stem": "batch_1_000088",
+      "width": 480,
+      "height": 640,
+      "box_count": 4
+    },
+    {
+      "image_id": 68,
+      "image_path": "data\\raw\\images\\batch_1\\000090.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000090.txt",
+      "stem": "batch_1_000090",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 69,
+      "image_path": "data\\raw\\images\\batch_1\\000091.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000091.txt",
+      "stem": "batch_1_000091",
+      "width": 640,
+      "height": 480,
+      "box_count": 2
+    },
+    {
+      "image_id": 70,
+      "image_path": "data\\raw\\images\\batch_1\\000092.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000092.txt",
+      "stem": "batch_1_000092",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 71,
+      "image_path": "data\\raw\\images\\batch_1\\000093.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000093.txt",
+      "stem": "batch_1_000093",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 72,
+      "image_path": "data\\raw\\images\\batch_1\\000094.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000094.txt",
+      "stem": "batch_1_000094",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 73,
+      "image_path": "data\\raw\\images\\batch_1\\000095.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000095.txt",
+      "stem": "batch_1_000095",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 74,
+      "image_path": "data\\raw\\images\\batch_1\\000096.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000096.txt",
+      "stem": "batch_1_000096",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 75,
+      "image_path": "data\\raw\\images\\batch_1\\000062.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000062.txt",
+      "stem": "batch_1_000062",
+      "width": 480,
+      "height": 640,
+      "box_count": 13
+    },
+    {
+      "image_id": 76,
+      "image_path": "data\\raw\\images\\batch_1\\000098.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000098.txt",
+      "stem": "batch_1_000098",
+      "width": 480,
+      "height": 640,
+      "box_count": 5
+    },
+    {
+      "image_id": 77,
+      "image_path": "data\\raw\\images\\batch_1\\000099.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000099.txt",
+      "stem": "batch_1_000099",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 78,
+      "image_path": "data\\raw\\images\\batch_1\\000064.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000064.txt",
+      "stem": "batch_1_000064",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 79,
+      "image_path": "data\\raw\\images\\batch_1\\000100.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000100.txt",
+      "stem": "batch_1_000100",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 80,
+      "image_path": "data\\raw\\images\\batch_1\\000101.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000101.txt",
+      "stem": "batch_1_000101",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 81,
+      "image_path": "data\\raw\\images\\batch_1\\000102.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000102.txt",
+      "stem": "batch_1_000102",
+      "width": 480,
+      "height": 640,
+      "box_count": 6
+    },
+    {
+      "image_id": 82,
+      "image_path": "data\\raw\\images\\batch_1\\000104.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000104.txt",
+      "stem": "batch_1_000104",
+      "width": 640,
+      "height": 480,
+      "box_count": 7
+    },
+    {
+      "image_id": 83,
+      "image_path": "data\\raw\\images\\batch_1\\000105.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000105.txt",
+      "stem": "batch_1_000105",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 84,
+      "image_path": "data\\raw\\images\\batch_1\\000106.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000106.txt",
+      "stem": "batch_1_000106",
+      "width": 480,
+      "height": 640,
+      "box_count": 6
+    },
+    {
+      "image_id": 85,
+      "image_path": "data\\raw\\images\\batch_1\\000107.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000107.txt",
+      "stem": "batch_1_000107",
+      "width": 480,
+      "height": 640,
+      "box_count": 5
+    },
+    {
+      "image_id": 86,
+      "image_path": "data\\raw\\images\\batch_1\\000108.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000108.txt",
+      "stem": "batch_1_000108",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 87,
+      "image_path": "data\\raw\\images\\batch_1\\000110.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000110.txt",
+      "stem": "batch_1_000110",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 88,
+      "image_path": "data\\raw\\images\\batch_1\\000111.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000111.txt",
+      "stem": "batch_1_000111",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 89,
+      "image_path": "data\\raw\\images\\batch_1\\000115.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000115.txt",
+      "stem": "batch_1_000115",
+      "width": 640,
+      "height": 480,
+      "box_count": 12
+    },
+    {
+      "image_id": 90,
+      "image_path": "data\\raw\\images\\batch_1\\000117.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000117.txt",
+      "stem": "batch_1_000117",
+      "width": 480,
+      "height": 640,
+      "box_count": 4
+    },
+    {
+      "image_id": 91,
+      "image_path": "data\\raw\\images\\batch_1\\000118.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000118.txt",
+      "stem": "batch_1_000118",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 92,
+      "image_path": "data\\raw\\images\\batch_1\\000119.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000119.txt",
+      "stem": "batch_1_000119",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 93,
+      "image_path": "data\\raw\\images\\batch_1\\000120.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000120.txt",
+      "stem": "batch_1_000120",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 94,
+      "image_path": "data\\raw\\images\\batch_1\\000121.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000121.txt",
+      "stem": "batch_1_000121",
+      "width": 480,
+      "height": 640,
+      "box_count": 2
+    },
+    {
+      "image_id": 95,
+      "image_path": "data\\raw\\images\\batch_1\\000122.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000122.txt",
+      "stem": "batch_1_000122",
+      "width": 480,
+      "height": 640,
+      "box_count": 1
+    },
+    {
+      "image_id": 96,
+      "image_path": "data\\raw\\images\\batch_1\\000004.jpg",
+      "label_path": "data\\converted\\labels\\batch_1_000004.txt",
+      "stem": "batch_1_000004",
+      "width": 640,
+      "height": 387,
+      "box_count": 1
+    },
+    {
+      "image_id": 97,
+      "image_path": "data\\raw\\images\\batch_1\\000124.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000124.txt",
+      "stem": "batch_1_000124",
+      "width": 480,
+      "height": 640,
+      "box_count": 3
+    },
+    {
+      "image_id": 98,
+      "image_path": "data\\raw\\images\\batch_1\\000127.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000127.txt",
+      "stem": "batch_1_000127",
+      "width": 480,
+      "height": 640,
+      "box_count": 10
+    },
+    {
+      "image_id": 99,
+      "image_path": "data\\raw\\images\\batch_1\\000128.JPG",
+      "label_path": "data\\converted\\labels\\batch_1_000128.txt",
+      "stem": "batch_1_000128",
+      "width": 480,
+      "height": 640,
+      "box_count": 13
+    }
+  ]
+}

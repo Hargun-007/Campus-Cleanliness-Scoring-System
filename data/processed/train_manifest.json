@@ -1,0 +1,497 @@
+{
+  "split": "train",
+  "count": 70,
+  "total_boxes": 204,
+  "samples": [
+    {
+      "image_id": 1,
+      "stem": "batch_1_000008",
+      "image_file": "batch_1_000008.jpg",
+      "label_file": "batch_1_000008.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 2,
+      "stem": "batch_1_000010",
+      "image_file": "batch_1_000010.jpg",
+      "label_file": "batch_1_000010.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 3,
+      "stem": "batch_1_000019",
+      "image_file": "batch_1_000019.jpg",
+      "label_file": "batch_1_000019.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 4,
+      "stem": "batch_1_000026",
+      "image_file": "batch_1_000026.jpg",
+      "label_file": "batch_1_000026.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 5,
+      "stem": "batch_1_000047",
+      "image_file": "batch_1_000047.jpg",
+      "label_file": "batch_1_000047.txt",
+      "box_count": 6
+    },
+    {
+      "image_id": 6,
+      "stem": "batch_1_000055",
+      "image_file": "batch_1_000055.jpg",
+      "label_file": "batch_1_000055.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 7,
+      "stem": "batch_1_000001",
+      "image_file": "batch_1_000001.jpg",
+      "label_file": "batch_1_000001.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 8,
+      "stem": "batch_1_000005",
+      "image_file": "batch_1_000005.jpg",
+      "label_file": "batch_1_000005.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 10,
+      "stem": "batch_1_000012",
+      "image_file": "batch_1_000012.jpg",
+      "label_file": "batch_1_000012.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 13,
+      "stem": "batch_1_000053",
+      "image_file": "batch_1_000053.jpg",
+      "label_file": "batch_1_000053.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 14,
+      "stem": "batch_1_000056",
+      "image_file": "batch_1_000056.jpg",
+      "label_file": "batch_1_000056.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 15,
+      "stem": "batch_1_000058",
+      "image_file": "batch_1_000058.jpg",
+      "label_file": "batch_1_000058.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 16,
+      "stem": "batch_1_000060",
+      "image_file": "batch_1_000060.jpg",
+      "label_file": "batch_1_000060.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 17,
+      "stem": "batch_1_000003",
+      "image_file": "batch_1_000003.jpg",
+      "label_file": "batch_1_000003.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 18,
+      "stem": "batch_1_000011",
+      "image_file": "batch_1_000011.jpg",
+      "label_file": "batch_1_000011.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 22,
+      "stem": "batch_1_000049",
+      "image_file": "batch_1_000049.jpg",
+      "label_file": "batch_1_000049.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 23,
+      "stem": "batch_1_000054",
+      "image_file": "batch_1_000054.jpg",
+      "label_file": "batch_1_000054.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 25,
+      "stem": "batch_1_000021",
+      "image_file": "batch_1_000021.jpg",
+      "label_file": "batch_1_000021.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 26,
+      "stem": "batch_1_000022",
+      "image_file": "batch_1_000022.jpg",
+      "label_file": "batch_1_000022.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 27,
+      "stem": "batch_1_000023",
+      "image_file": "batch_1_000023.jpg",
+      "label_file": "batch_1_000023.txt",
+      "box_count": 7
+    },
+    {
+      "image_id": 28,
+      "stem": "batch_1_000024",
+      "image_file": "batch_1_000024.jpg",
+      "label_file": "batch_1_000024.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 29,
+      "stem": "batch_1_000027",
+      "image_file": "batch_1_000027.jpg",
+      "label_file": "batch_1_000027.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 30,
+      "stem": "batch_1_000028",
+      "image_file": "batch_1_000028.jpg",
+      "label_file": "batch_1_000028.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 32,
+      "stem": "batch_1_000031",
+      "image_file": "batch_1_000031.jpg",
+      "label_file": "batch_1_000031.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 36,
+      "stem": "batch_1_000000",
+      "image_file": "batch_1_000000.jpg",
+      "label_file": "batch_1_000000.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 38,
+      "stem": "batch_1_000015",
+      "image_file": "batch_1_000015.jpg",
+      "label_file": "batch_1_000015.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 39,
+      "stem": "batch_1_000016",
+      "image_file": "batch_1_000016.jpg",
+      "label_file": "batch_1_000016.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 41,
+      "stem": "batch_1_000025",
+      "image_file": "batch_1_000025.jpg",
+      "label_file": "batch_1_000025.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 42,
+      "stem": "batch_1_000029",
+      "image_file": "batch_1_000029.jpg",
+      "label_file": "batch_1_000029.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 43,
+      "stem": "batch_1_000035",
+      "image_file": "batch_1_000035.jpg",
+      "label_file": "batch_1_000035.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 44,
+      "stem": "batch_1_000037",
+      "image_file": "batch_1_000037.jpg",
+      "label_file": "batch_1_000037.txt",
+      "box_count": 5
+    },
+    {
+      "image_id": 45,
+      "stem": "batch_1_000045",
+      "image_file": "batch_1_000045.jpg",
+      "label_file": "batch_1_000045.txt",
+      "box_count": 6
+    },
+    {
+      "image_id": 46,
+      "stem": "batch_1_000038",
+      "image_file": "batch_1_000038.jpg",
+      "label_file": "batch_1_000038.txt",
+      "box_count": 6
+    },
+    {
+      "image_id": 47,
+      "stem": "batch_1_000065",
+      "image_file": "batch_1_000065.JPG",
+      "label_file": "batch_1_000065.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 48,
+      "stem": "batch_1_000066",
+      "image_file": "batch_1_000066.JPG",
+      "label_file": "batch_1_000066.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 49,
+      "stem": "batch_1_000067",
+      "image_file": "batch_1_000067.JPG",
+      "label_file": "batch_1_000067.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 50,
+      "stem": "batch_1_000068",
+      "image_file": "batch_1_000068.JPG",
+      "label_file": "batch_1_000068.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 51,
+      "stem": "batch_1_000069",
+      "image_file": "batch_1_000069.JPG",
+      "label_file": "batch_1_000069.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 52,
+      "stem": "batch_1_000070",
+      "image_file": "batch_1_000070.JPG",
+      "label_file": "batch_1_000070.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 53,
+      "stem": "batch_1_000071",
+      "image_file": "batch_1_000071.JPG",
+      "label_file": "batch_1_000071.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 54,
+      "stem": "batch_1_000072",
+      "image_file": "batch_1_000072.JPG",
+      "label_file": "batch_1_000072.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 55,
+      "stem": "batch_1_000073",
+      "image_file": "batch_1_000073.JPG",
+      "label_file": "batch_1_000073.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 56,
+      "stem": "batch_1_000074",
+      "image_file": "batch_1_000074.JPG",
+      "label_file": "batch_1_000074.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 59,
+      "stem": "batch_1_000079",
+      "image_file": "batch_1_000079.JPG",
+      "label_file": "batch_1_000079.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 61,
+      "stem": "batch_1_000082",
+      "image_file": "batch_1_000082.JPG",
+      "label_file": "batch_1_000082.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 62,
+      "stem": "batch_1_000083",
+      "image_file": "batch_1_000083.JPG",
+      "label_file": "batch_1_000083.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 63,
+      "stem": "batch_1_000084",
+      "image_file": "batch_1_000084.JPG",
+      "label_file": "batch_1_000084.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 64,
+      "stem": "batch_1_000085",
+      "image_file": "batch_1_000085.JPG",
+      "label_file": "batch_1_000085.txt",
+      "box_count": 9
+    },
+    {
+      "image_id": 65,
+      "stem": "batch_1_000086",
+      "image_file": "batch_1_000086.JPG",
+      "label_file": "batch_1_000086.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 66,
+      "stem": "batch_1_000087",
+      "image_file": "batch_1_000087.JPG",
+      "label_file": "batch_1_000087.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 68,
+      "stem": "batch_1_000090",
+      "image_file": "batch_1_000090.JPG",
+      "label_file": "batch_1_000090.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 69,
+      "stem": "batch_1_000091",
+      "image_file": "batch_1_000091.JPG",
+      "label_file": "batch_1_000091.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 70,
+      "stem": "batch_1_000092",
+      "image_file": "batch_1_000092.JPG",
+      "label_file": "batch_1_000092.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 72,
+      "stem": "batch_1_000094",
+      "image_file": "batch_1_000094.JPG",
+      "label_file": "batch_1_000094.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 74,
+      "stem": "batch_1_000096",
+      "image_file": "batch_1_000096.JPG",
+      "label_file": "batch_1_000096.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 75,
+      "stem": "batch_1_000062",
+      "image_file": "batch_1_000062.JPG",
+      "label_file": "batch_1_000062.txt",
+      "box_count": 13
+    },
+    {
+      "image_id": 76,
+      "stem": "batch_1_000098",
+      "image_file": "batch_1_000098.JPG",
+      "label_file": "batch_1_000098.txt",
+      "box_count": 5
+    },
+    {
+      "image_id": 78,
+      "stem": "batch_1_000064",
+      "image_file": "batch_1_000064.JPG",
+      "label_file": "batch_1_000064.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 80,
+      "stem": "batch_1_000101",
+      "image_file": "batch_1_000101.JPG",
+      "label_file": "batch_1_000101.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 81,
+      "stem": "batch_1_000102",
+      "image_file": "batch_1_000102.JPG",
+      "label_file": "batch_1_000102.txt",
+      "box_count": 6
+    },
+    {
+      "image_id": 83,
+      "stem": "batch_1_000105",
+      "image_file": "batch_1_000105.JPG",
+      "label_file": "batch_1_000105.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 84,
+      "stem": "batch_1_000106",
+      "image_file": "batch_1_000106.JPG",
+      "label_file": "batch_1_000106.txt",
+      "box_count": 6
+    },
+    {
+      "image_id": 86,
+      "stem": "batch_1_000108",
+      "image_file": "batch_1_000108.JPG",
+      "label_file": "batch_1_000108.txt",
+      "box_count": 2
+    },
+    {
+      "image_id": 88,
+      "stem": "batch_1_000111",
+      "image_file": "batch_1_000111.JPG",
+      "label_file": "batch_1_000111.txt",
+      "box_count": 3
+    },
+    {
+      "image_id": 90,
+      "stem": "batch_1_000117",
+      "image_file": "batch_1_000117.JPG",
+      "label_file": "batch_1_000117.txt",
+      "box_count": 4
+    },
+    {
+      "image_id": 91,
+      "stem": "batch_1_000118",
+      "image_file": "batch_1_000118.JPG",
+      "label_file": "batch_1_000118.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 92,
+      "stem": "batch_1_000119",
+      "image_file": "batch_1_000119.JPG",
+      "label_file": "batch_1_000119.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 96,
+      "stem": "batch_1_000004",
+      "image_file": "batch_1_000004.jpg",
+      "label_file": "batch_1_000004.txt",
+      "box_count": 1
+    },
+    {
+      "image_id": 98,
+      "stem": "batch_1_000127",
+      "image_file": "batch_1_000127.JPG",
+      "label_file": "batch_1_000127.txt",
+      "box_count": 10
+    },
+    {
+      "image_id": 99,
+      "stem": "batch_1_000128",
+      "image_file": "batch_1_000128.JPG",
+      "label_file": "batch_1_000128.txt",
+      "box_count": 13
+    }
+  ]
+}

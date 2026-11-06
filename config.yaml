@@ -1,0 +1,89 @@
+# ==============================================================================
+# Campus Cleanliness Scoring System - Configuration
+# Ramdeobaba University, Nagpur | Deep Learning Lab Capstone
+# Team: Arya Mohod, Darsh Kadu, Hargun Singh Jaggi, Ayaan Ahmed
+# ==============================================================================
+
+project:
+  name: "Campus Cleanliness Scoring System"
+  institution: "Ramdeobaba University, Nagpur"
+  department: "Department of Electronics Engineering"
+  course: "Deep Learning Lab (Semester V, 2026-27)"
+  authors:
+    - name: "Arya Mohod"
+      roll_no: "06"
+      role: "Dataset preparation, annotation conversion, preprocessing"
+    - name: "Darsh Kadu"
+      roll_no: "11"
+      role: "YOLOv8n setup, transfer learning, training & experiment tracking"
+    - name: "Hargun Singh Jaggi"
+      roll_no: "16"
+      role: "Model evaluation, metrics, error analysis & comparisons"
+    - name: "Ayaan Ahmed"
+      roll_no: "09"
+      role: "Cleanliness score, Flask prototype, integration & testing"
+
+dataset:
+  name: "TACO (Trash Annotations in Context)"
+  raw_dir: "data/raw"
+  taco_annotations: "data/raw/annotations.json"
+  taco_images_dir: "data/raw/images"
+  processed_dir: "data/processed"
+  dataset_yaml: "data/processed/dataset.yaml"
+  splits:
+    train: 0.70
+    val: 0.15
+    test: 0.15
+  random_seed: 42
+  num_classes: 1
+  classes:
+    0: "litter"
+
+training:
+  base_model: "yolov8n.pt"
+  img_size: 640
+  epochs: 50
+  batch_size: 16
+  batch_size_fallback: 8
+  optimizer: "Adam"
+  learning_rate: 0.001
+  patience: 10
+  seed: 42
+  device: "cpu" # 'cuda' (if GPU available) or 'cpu'
+  workers: 2
+  save_dir: "runs/detect/train"
+
+inference:
+  model_path: "models/best.pt"
+  fallback_model_path: "models/yolov8n.pt"
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+  img_size: 640
+  device: "cpu"
+
+scoring:
+  # Cleanliness Score Formula:
+  # count_penalty = 1 - exp(-alpha * litter_count)
+  # area_penalty = min(1.0, area_ratio / area_scale)
+  # cleanliness_score = round(100 * (1 - (count_weight * count_penalty + area_weight * area_penalty)))
+  alpha: 0.35
+  area_scale: 0.15
+  count_weight: 0.50
+  area_weight: 0.50
+  baseline_alpha: 0.25
+
+web:
+  host: "127.0.0.1"
+  port: 5000
+  debug: false
+  max_content_length: 16777216  # 16 MB
+  allowed_extensions: ["jpg", "jpeg", "png", "webp"]
+  upload_folder: "static/uploads"
+  results_folder: "static/results"
+
+paths:
+  models_dir: "models"
+  reports_dir: "reports"
+  runs_dir: "runs"
+  campus_test_dir: "data/campus_test"
+
